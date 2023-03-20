@@ -44,7 +44,7 @@ export default function Header(){
           </label>
           {/* Desktop menu */}
           <nav className='hidden md:flex'>
-            <p className='text-orange-400 text-xl text-center'><Link className='text-amber-50' href='/'>Home</Link> | <Link className='text-amber-50' href='/'>Work</Link> | <Link className='text-amber-50' href='/'>About</Link> | <Link className='text-amber-50' href='/'>Contact</Link></p>
+            <p className='text-orange-400 text-xl text-center'><Link className='text-amber-50 active:text-teal-800 hover:text-teal-800' href='/'>Home</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800' href='/'>Work</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800' href='/'>About</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800' href='/'>Contact</Link></p>
           </nav>
           {/* Mobile menu */}
           <nav className='md:hidden'>
