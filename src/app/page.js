@@ -12,7 +12,7 @@ export default function Home() {
       <Image className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/four.jpg')} />
       <Image className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/five.jpg')} />
       <Image className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/six.jpg')} />   
-      <Link className='justify-self-end md:justify-self-center md:col-start-3 hover:text-orange-400' href='/'>See more...</Link>   
+      <Link className='justify-self-end md:justify-self-center md:col-start-3 hover:text-orange-400' href='/work'>See more...</Link>   
     </div>
     <p className='md:w-11/12 justify-self-center p-8 text-3xl md:text-2xl m-auto md:p-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
