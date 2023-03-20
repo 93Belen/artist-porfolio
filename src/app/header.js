@@ -8,7 +8,10 @@ export default function Header(){
     const onClickMenu = () => {
         const navbar = document.getElementById('navbar');
         if(open){
-            navbar.style.display = 'none'
+            const hide = () => navbar.style.display = 'none';
+            setTimeout(hide, 1000)
+            navbar.style.animationName = 'desappear-menu'
+            navbar.style.animationDuration = '1s'
             setOpen(()=> false)
             document.getElementById('line-2').style.display = 'block'
             document.getElementById('line-1').style.transform = 'rotate(0deg)'
@@ -18,6 +21,8 @@ export default function Header(){
         }
         else {
             navbar.style.display = 'flex'
+            navbar.style.animationName = 'appear-menu'
+            navbar.style.animationDuration = '1s'
             setOpen(()=> true)
             document.getElementById('line-2').style.display = 'none'
             document.getElementById('line-1').style.transform = 'rotate(-30deg)'
@@ -44,7 +49,7 @@ export default function Header(){
               <line id='line-3' x1="1.5" y1="15.5" x2="23.5" y2="15.5" stroke="#FABE8F" stroke-width="3" stroke-linecap="round"/>
             </svg>
             </button>
-            <div id='navbar' className="text-3xl hidden text-center bg-opacity-50 backdrop-blur-2xl absolute flex-col h-3/5 justify-around bg-slate-200 w-4/5 text-gray-900 top-20 left-0 rounded-xl">
+            <div id='navbar' className="text-3xl hidden text-center bg-opacity-50 backdrop-blur-2xl absolute flex-col h-3/6 justify-around bg-slate-200 w-4/5 text-gray-900 top-20 left-0 rounded-xl">
               <Link href="/">Home</Link>
               <Link href="/">Work</Link>
               <Link href="/">About</Link>
