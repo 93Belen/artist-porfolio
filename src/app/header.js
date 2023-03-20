@@ -23,7 +23,7 @@ export default function Header(){
         else {
             navbar.style.display = 'flex'
             navbar.style.animationName = 'appear-menu'
-            navbar.style.animationDuration = '1s'
+            navbar.style.animationDuration = '0.5s'
             setOpen(()=> true)
             document.getElementById('line-2').style.transform = 'translateX(-50px)'
             document.getElementById('line-2').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
@@ -55,7 +55,7 @@ export default function Header(){
               <line id='line-3' x1="1.5" y1="15.5" x2="23.5" y2="15.5" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
             </svg>
             </button>
-            <div id='navbar' className="text-3xl hidden text-center backdrop-blur-2xl absolute flex-col h-3/6 justify-around w-screen top-20 left-0">
+            <div id='navbar' className="text-3xl hidden text-center backdrop-blur-2xl bg-slate-900 bg-opacity-5 absolute flex-col h-3/6 justify-around w-screen top-20 left-0">
               <Link href="/">Home</Link>
               <Link href="/">Work</Link>
               <Link href="/">About</Link>
