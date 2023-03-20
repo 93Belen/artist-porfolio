@@ -13,7 +13,8 @@ export default function Header(){
             navbar.style.animationName = 'desappear-menu'
             navbar.style.animationDuration = '1s'
             setOpen(()=> false)
-            document.getElementById('line-2').style.display = 'block'
+            document.getElementById('line-2').style.transform = 'translateX(0)'
+            document.getElementById('line-2').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
             document.getElementById('line-1').style.transform = 'rotate(0deg)'
             document.getElementById('line-3').style.transform = 'rotate(0deg)'
             document.getElementById('line-1').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
@@ -24,7 +25,8 @@ export default function Header(){
             navbar.style.animationName = 'appear-menu'
             navbar.style.animationDuration = '1s'
             setOpen(()=> true)
-            document.getElementById('line-2').style.display = 'none'
+            document.getElementById('line-2').style.transform = 'translateX(-50px)'
+            document.getElementById('line-2').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
             document.getElementById('line-1').style.transform = 'rotate(-30deg)'
             document.getElementById('line-1').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
             document.getElementById('line-3').style.transform = 'rotate(30deg)'
@@ -53,7 +55,7 @@ export default function Header(){
               <line id='line-3' x1="1.5" y1="15.5" x2="23.5" y2="15.5" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
             </svg>
             </button>
-            <div id='navbar' className="text-3xl hidden text-center bg-opacity-50 backdrop-blur-2xl absolute flex-col h-3/6 justify-around bg-slate-200 w-4/5 text-gray-900 top-20 left-2 rounded-2xl">
+            <div id='navbar' className="text-3xl hidden text-center backdrop-blur-2xl absolute flex-col h-3/6 justify-around w-screen top-20 left-0">
               <Link href="/">Home</Link>
               <Link href="/">Work</Link>
               <Link href="/">About</Link>
