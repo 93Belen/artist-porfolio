@@ -15,11 +15,11 @@ export default function Header(){
             document.body.style.overflowY = ''
             setOpen(()=> false)
             document.getElementById('line-2').style.transform = 'translateX(0)'
-            document.getElementById('line-2').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-2').style.transition = '0.7s cubic-bezier(0, 0, 0, 1)'
             document.getElementById('line-1').style.transform = 'rotate(0deg)'
             document.getElementById('line-3').style.transform = 'rotate(0deg)'
-            document.getElementById('line-1').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
-            document.getElementById('line-3').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-1').style.transition = '0.7s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-3').style.transition = '0.7s cubic-bezier(0, 0, 0, 1)'
         }
         else {
             navbar.style.display = 'flex'
@@ -27,11 +27,11 @@ export default function Header(){
             navbar.style.animationDuration = '0.5s'
             setOpen(()=> true)
             document.getElementById('line-2').style.transform = 'translateX(-50px)'
-            document.getElementById('line-2').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-2').style.transition = '0.7s cubic-bezier(0, 0, 0, 1)'
             document.getElementById('line-1').style.transform = 'rotate(-30deg)'
-            document.getElementById('line-1').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-1').style.transition = '0.7s cubic-bezier(0, 0, 0, 1)'
             document.getElementById('line-3').style.transform = 'rotate(30deg)'
-            document.getElementById('line-3').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-3').style.transition = '0.7s cubic-bezier(0, 0, 0, 1)'
             document.getElementById('line-3').style.transformOrigin = 'right'
             document.getElementById('line-1').style.transformOrigin = 'right'
             document.body.style.overflowY = 'hidden'
