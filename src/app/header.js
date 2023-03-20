@@ -10,10 +10,22 @@ export default function Header(){
         if(open){
             navbar.style.display = 'none'
             setOpen(()=> false)
+            document.getElementById('line-2').style.display = 'block'
+            document.getElementById('line-1').style.transform = 'rotate(0deg)'
+            document.getElementById('line-3').style.transform = 'rotate(0deg)'
+            document.getElementById('line-1').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-3').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
         }
         else {
             navbar.style.display = 'flex'
             setOpen(()=> true)
+            document.getElementById('line-2').style.display = 'none'
+            document.getElementById('line-1').style.transform = 'rotate(-30deg)'
+            document.getElementById('line-1').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-3').style.transform = 'rotate(30deg)'
+            document.getElementById('line-3').style.transition = '0.4s cubic-bezier(0, 0, 0, 1)'
+            document.getElementById('line-3').style.transformOrigin = 'right'
+            document.getElementById('line-1').style.transformOrigin = 'right'
         }
     }
     return (
@@ -27,9 +39,9 @@ export default function Header(){
           <nav>
             <button onClick={onClickMenu} type='button' data-collapse-toggle="navbar" >
             <svg width="50" height="50" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="1.5" y1="1.5" x2="23.5" y2="1.5" stroke="#FABE8F" stroke-width="3" stroke-linecap="round"/>
-              <line x1="1.5" y1="8.5" x2="23.5" y2="8.5" stroke="#FABE8F" stroke-width="3" stroke-linecap="round"/>
-              <line x1="1.5" y1="15.5" x2="23.5" y2="15.5" stroke="#FABE8F" stroke-width="3" stroke-linecap="round"/>
+              <line id='line-1' x1="1.5" y1="1.5" x2="23.5" y2="1.5" stroke="#FABE8F" stroke-width="3" stroke-linecap="round"/>
+              <line id='line-2' x1="1.5" y1="8.5" x2="23.5" y2="8.5" stroke="#FABE8F" stroke-width="3" stroke-linecap="round"/>
+              <line id='line-3' x1="1.5" y1="15.5" x2="23.5" y2="15.5" stroke="#FABE8F" stroke-width="3" stroke-linecap="round"/>
             </svg>
             </button>
             <div id='navbar' className="text-3xl hidden text-center bg-opacity-50 backdrop-blur-2xl absolute flex-col h-3/5 justify-around bg-slate-200 w-4/5 text-gray-900 top-20 left-0 rounded-xl">
