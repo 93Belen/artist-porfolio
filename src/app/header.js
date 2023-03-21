@@ -46,7 +46,7 @@ export default function Header(){
           </label>
           {/* Desktop menu */}
           <nav className='hidden md:flex'>
-            <p className='text-orange-400 text-xl text-center'><Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>Home</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/work'>Work</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>About</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>Contact</Link></p>
+            <p className='text-orange-400 text-xl text-center'><Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>Home</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/work'>Work</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/about'>About</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>Contact</Link></p>
           </nav>
           {/* Mobile menu */}
           <nav className='md:hidden'>
@@ -60,7 +60,7 @@ export default function Header(){
             <div id='navbar' className="text-3xl hidden text-center backdrop-blur-2xl bg-slate-900 fixed flex-col h-screen pb-60 justify-around w-screen top-20 left-0">
               <Link onClick={onClickMenu} href="/">Home</Link>
               <Link onClick={onClickMenu} href="/work">Work</Link>
-              <Link onClick={onClickMenu} href="/">About</Link>
+              <Link onClick={onClickMenu} href="/about">About</Link>
               <Link onClick={onClickMenu} href="/">Contact</Link>
             </div>
           </nav>
