@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const options = createSlice({
     name: 'showModal',
-    initialState: false,
+    initialState: true,
     reducers: {
         changeState: (state, action) => {
             state = action.payload;
