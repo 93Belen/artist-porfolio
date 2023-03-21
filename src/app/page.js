@@ -1,14 +1,14 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { useDispatch } from "react-redux";
 
 
 
 export default function Home() {
-  const dispatch = useDispatch();
   const openModal = () => {
-        dispatch({type: 'showModal/changeState', payload: true})
+            document.getElementById('modal').style.display = 'block'
+            document.getElementById('modal').style.animationName = 'appear-menu'
+            document.getElementById('modal').style.animationDuration = '1s'
   }
 
 
