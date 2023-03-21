@@ -9,9 +9,9 @@ export default function Modal(){
 
     const closeModal = () => {
             const hide = () => document.getElementById('modal').style.display = 'none'
-            setTimeout(hide, 1000)
+            setTimeout(hide, 500)
             document.getElementById('modal').style.animationName = 'desappear-modal'
-            document.getElementById('modal').style.animationDuration = '0.5s'
+            document.getElementById('modal').style.animationDuration = '0.7s'
             document.getElementById('modal').style.transform = 'scale(1,0)'
             document.getElementById('modal').style.transformOrigin = 'top'
             document.getElementById('modal').style.transitionDuration = '1s'
