@@ -9,11 +9,13 @@ export default function Modal(){
 
     const closeModal = () => {
             const hide = () => document.getElementById('modal').style.display = 'none'
-            setTimeout(hide, 1000)
-            document.getElementById('modal').style.animationName = 'desappear-menu'
-            document.getElementById('modal').style.animationDuration = '1s'
-            document.getElementById('modal').style.transform = 'scale(0)'
-            document.getElementById('modal').style.transitionDuration = '0.5s'
+            setTimeout(hide, 600)
+            document.getElementById('modal').style.animationName = 'desappear-modal'
+            document.getElementById('modal').style.animationDuration = '0.5s'
+            document.getElementById('modal').style.transform = 'scale(1,0)'
+            document.getElementById('modal').style.transformOrigin = 'top'
+            document.getElementById('modal').style.transitionDuration = '1s'
+
     }
 
     return (

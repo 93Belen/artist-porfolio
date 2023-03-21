@@ -31,5 +31,20 @@
     }
 }
 
+@keyframes desappear-modal {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
 
 
