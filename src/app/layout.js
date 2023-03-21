@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
       <body className='w-screen min-h-screen h-fit bg-slate-900 text-gray-100 box-border overflow-x-hidden'>
       <Providers>
       <Header />
-      <Modal />
       <main className="min-h-3/5 w-screen">
+          <Modal />
           {children} 
       </main>
       </Providers>
