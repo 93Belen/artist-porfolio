@@ -1,9 +1,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { store } from "../../redux/store";
 
 
 export default function Home() {
+
   return (
     <div className='w-screen md:p-8'>
     <div className='grid min-h-screen gap-9 md:grid-cols-3 md:grid-rows-2 p-7 justify-items-center w-screen md:w-3/4 justify-self-center m-auto'>
