@@ -27,7 +27,7 @@ export default function Modal(){
                     <line x1="17.4215" y1="19.3907" x2="3.28021" y2="2.5377" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
                 </svg>
 </button>
-                <div className='p-2 h-fit justify-items-center items-center row-start-1 row-span-2'><Image className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' src={require('../../imgs/one.jpg')} /></div>
+                <div className='p-1 h-fit justify-items-center items-center row-start-1 row-span-2'><Image className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' src={require('../../imgs/one.jpg')} /></div>
                 <div className='text-white p-4'>
                     <p className='text-3xl'>titulo</p>
                     <p className='text-3xl'>precio</p>
