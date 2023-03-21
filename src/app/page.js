@@ -13,10 +13,9 @@ export default function Home() {
             window.scrollTo(0, 0)
   }
 
-
   return (
     <div className='w-screen md:p-6 h-fit md:h-screen'>
-        <Image className='fixed hidden md:block left-0 md:mt-60 md:mb-[-250px] bottom-0' src={require('../../imgs/nature.png')} />
+        <Image id='home-img' className='fixed hidden md:block left-0 md:mt-60 bottom-[-250px] md:bg-blend-screen' src={require('../../imgs/nature.png')} />
     <div className=' h-fit md:h-screen'>
       <p className='md:w-11/12 justify-self-center p-8 text-3xl md:text-4xl m-auto md:p-12'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
