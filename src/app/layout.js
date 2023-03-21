@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import './globals.css'
 import Header from './header'
+import Modal from './modal'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,8 +12,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='w-screen min-h-screen h-fit bg-slate-900 text-gray-100 box-border overflow-x-hidden'>
       <Header />
+      <Modal />
       <main className="min-h-3/5 w-screen">
-          {children}
+          {children} 
       </main>
       </body>
     </html>
