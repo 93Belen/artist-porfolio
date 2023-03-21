@@ -29,14 +29,14 @@ export default function Modal(){
 </button>
                 <div className='p-2 h-fit justify-items-center items-center'><Image className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' src={require('../../imgs/one.jpg')} /></div>
                 <div className='text-white p-4'>
-                    <p>titulo</p>
-                    <p>precio</p>
-                    <p>id number</p>
-                    <p>date</p>
-                    <p>something else</p>
+                    <p className='text-3xl'>titulo</p>
+                    <p className='text-3xl'>precio</p>
+                    <p className='text-3xl'>id number</p>
+                    <p className='text-3xl'>date</p>
+                    <p className='text-3xl'>something else</p>
                 </div>
-                <div className='text-white md:col-span-2 p-12 sm:p-4 w-auto'>
-                    <p>ore veritatis et quasi architecto beatae vitae dicta sunt expli
+                <div className='text-white md:col-span-2 md:p-12 sm:p-4 w-auto'>
+                    <p className='text-3xl'>ore veritatis et quasi architecto beatae vitae dicta sunt expli
                         cabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut o
                         dit aut fugit, sed quia consequuntur magni dolores eos qui ratione v
                         oluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsu
