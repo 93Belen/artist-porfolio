@@ -21,11 +21,11 @@ export default function Modal(){
         }
     })
     const closeModal = () => {
-        dispatch({type: 'showModal/changeState', payload: false})
+            dispatch({type: 'showModal/changeState', payload: false})
     }
 
     return (
-        <div id='modal' className='h-screen w-screen fixed z-10  md:rounded-xl'>
+        <div id='modal' className='h-screen w-screen fixed z-10  md:rounded-xl hidden'>
             <div className='grid p-8 bg-white sm:h-full sm:w-full md:grid-cols-2 md:grid-rows-[5%_50%_45%] gap-4 md:w-4/5 md:h-3/5 fixed md:left-36 md:rounded-xl'>
                 <button onClick={closeModal} className='text-black md:col-start-2 md:self-start md:justify-self-end md:hover:rotate-180'>X</button>
                 <div className='p-2 h-fit justify-items-center items-center'><Image height={250} className="md:rounded-xl md:rotate-[-10deg] m-auto" src={require('../../imgs/one.jpg')} /></div>

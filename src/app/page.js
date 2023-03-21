@@ -8,13 +8,14 @@ import { useDispatch } from "react-redux";
 export default function Home() {
   const dispatch = useDispatch();
   const openModal = () => {
-    dispatch({type: 'showModal/changeState', payload: true})
+        dispatch({type: 'showModal/changeState', payload: true})
   }
+
 
   return (
     <div className='w-screen md:p-8'>
     <div className='grid min-h-screen gap-9 md:grid-cols-3 md:grid-rows-2 p-7 justify-items-center w-screen md:w-3/4 justify-self-center m-auto'>
-      <Image onClick={openModal} className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/one.jpg')} />
+      <Image id='pic-one' onClick={openModal} className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer]' src={require('../../imgs/one.jpg')} />
       <Image className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/two.jpg')} />
       <Image className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/three.jpg')} />
 
