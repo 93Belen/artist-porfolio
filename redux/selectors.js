@@ -1,1 +1,1 @@
-export const selectShowModal = (state) => state.showModal;
+export const selectCart= (state) => state.cart;

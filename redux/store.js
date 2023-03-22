@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import showModal from "./showModal";
+import cart from "./cart";
 
 export const store = configureStore({
     reducer: {
-        showModal: showModal
+        cart: cart
     }
 });
 
