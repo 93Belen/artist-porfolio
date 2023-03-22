@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className='w-screen md:p-6 h-fit md:h-screen'>
-        <Image id='home-img' className='fixed hidden md:block left-0 md:mt-60 bottom-[-250px] md:bg-blend-screen' src={require('../../imgs/nature.png')} />
+        <Image id='home-img' className='fixed hidden md:block left-0 md:mt-60 bottom-[-300px] md:bg-blend-screen' src={require('../../imgs/trees.png')} />
     <div className=' h-fit md:h-screen'>
       <p className='md:w-11/12 justify-self-center p-8 text-3xl md:text-4xl m-auto md:p-12'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -26,7 +26,7 @@ export default function Home() {
       <Image onClick={openModal} className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/two.jpg')} />
       <Image onClick={openModal} className='h-auto w-full md:w-auto md:h-64 rounded-md md:hover:rotate-[-10deg] duration-500 cursor-pointer' src={require('../../imgs/three.jpg')} />
 
-      <Link className='justify-self-end md:justify-self-center md:col-start-3 hover:text-orange-400 mt-0 pt-0' href='/work'>See more...</Link>  
+     
     </div>
     </div>
     </div>
