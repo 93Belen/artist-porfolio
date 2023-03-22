@@ -48,3 +48,9 @@
 html {
     scroll-behavior: smooth;
 }
+#closing-modal-button{
+    transition-duration: 1s;
+}
+#closing-modal-button:hover{
+    transform: rotate(360deg);
+}
