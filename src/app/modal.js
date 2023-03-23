@@ -1,9 +1,10 @@
 "use client"
 
 import Image from "next/image"
+import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { add } from "../../redux/cart"
-import { selectitemChosen } from "../../redux/selectors"
+import { selectCart, selectitemChosen } from "../../redux/selectors"
 
 
 
@@ -11,11 +12,18 @@ import { selectitemChosen } from "../../redux/selectors"
 export default function Modal(){
 const item = useSelector(selectitemChosen)
 const dispatch = useDispatch();
-console.log(item);
+const cart = useSelector(selectCart);
 
 const addToCard = () => {
     dispatch(add(item))
 }
+useEffect(() => {
+    if(cart.length> 0){
+        localStorage.setItem('cart', cart);
+    }
+}, [cart])
+
+
 
     const closeModal = () => {
             const hide = () => document.getElementById('modal').style.display = 'none'
