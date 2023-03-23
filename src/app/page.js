@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 
 
 
@@ -12,6 +11,12 @@ export default function Home() {
             document.getElementById('modal').style.transform = 'scale(1)';
             window.scrollTo(0, 0)
   }
+
+  const getAllItems = async() => {
+    const response = await fetch('/api/items')
+    console.log(response.json())
+  }
+  getAllItems();
 
   return (
     <div className='w-screen md:p-6 h-fit md:h-screen'>

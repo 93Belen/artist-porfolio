@@ -11,6 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+
+      </head>
       <body className='w-screen min-h-screen h-fit bg-slate-900 text-gray-100 box-border overflow-x-hidden'>
       <Providers>
       <Header />
@@ -19,6 +22,7 @@ export default function RootLayout({ children }) {
           {children} 
       </main>
       </Providers>
+      <script src="https://js.stripe.com/v3/"></script>
       </body>
     </html>
   )
