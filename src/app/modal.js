@@ -33,7 +33,7 @@ export default function Modal(){
                     <p className='text-3xl'>precio</p>
                     <p className='text-3xl'>id number</p>
                     <p className='text-3xl'>date</p>
-                    <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black'>Add to Cart</button>
+                    <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700'>Add to Cart</button>
                 </div>
                 <div className='text-white md:col-span-2 md:p-10 md:pt-1 sm:p-4 h-fit w-auto'>
                     <p className='text-3xl'>ore veritatis et quasi architecto beatae vitae dicta sunt expli
