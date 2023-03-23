@@ -1,8 +1,23 @@
 "use client"
 
+import { useSelector } from "react-redux"
+import { selectCart, selectItems } from "../../redux/selectors"
+
 
 
 export default function CartModal(){
+    const cart = useSelector(selectCart);
+    const items = useSelector(selectItems);
+    
+    const displayItems = () => {
+        for(const id of cart){
+            return (
+                <div>
+                    <p>{items[id].name}</p>
+                </div>
+            )
+        }
+    }
 
 
 
@@ -26,7 +41,9 @@ export default function CartModal(){
                     <line x1="17.4215" y1="19.3907" x2="3.28021" y2="2.5377" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
                 </svg>
 </button>
-                <p>Cart modal</p>
+                <div>
+                    {displayItems()}
+                </div>
             </div>
         </div>
     )
