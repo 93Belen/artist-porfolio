@@ -5,7 +5,7 @@ const options = createSlice({
     initialState: [],
     reducers: {
         add: (state, action) => {
-            state.add[action.payload];
+            state.push(action.payload);
             return state;
         },
         remove: (state, action) => {
