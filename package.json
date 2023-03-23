@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^1.0.0-beta.6",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@reduxjs/toolkit": "^1.9.3",
     "@stripe/stripe-js": "^1.51.0",

@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { selectCart, selectItems } from "../../redux/selectors"
 import Image from "next/image";
 import { remove } from "../../redux/cart";
+import { useState, useRef, useEffect } from 'react'
+import autoAnimate from '@formkit/auto-animate'
+
 
 
 
@@ -11,6 +14,16 @@ export default function CartModal(){
     const cart = useSelector(selectCart);
     const items = useSelector(selectItems);
     const dispatch = useDispatch();
+
+    const [show, setShow] = useState(false)
+    const parent = useRef(null)
+
+    useEffect(() => {
+        parent.current && autoAnimate(parent.current)
+    }, [parent])
+
+
+
     const removeFromCart = (id) => {
         dispatch(remove(id))
     }
@@ -19,8 +32,9 @@ export default function CartModal(){
         const arr = [];
         for(const id of cart){
             const [url, size, date, description] = items[id].description.split(" - ")
+            const randomKey = Math.random() * 12 + Math.random() * 24;
                 arr.push(
-                <div className='w-full h-[100px] flex md:flex-row flex-col justify-evenly text-black'>
+                <div key={randomKey} className='w-full h-[100px] flex md:flex-row flex-col justify-evenly text-black'>
                     <p>{items[id].name}</p>
                     <p>{size}</p>
                     <p>price</p>
@@ -55,7 +69,7 @@ export default function CartModal(){
                     <line x1="17.4215" y1="19.3907" x2="3.28021" y2="2.5377" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
                     </svg>
                 </button>
-                <div className='w-full h-fit flex flex-col gap-6 col-span-2'>
+                <div ref={parent} className='w-full h-fit flex flex-col gap-6 col-span-2'>
                     {displayItems()}
                 </div>
                 <button className='text-2xl text-white p-1 bg-orange-400 h-[50px] m-2 md:m-4 w-[70px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700  md:justify-self-end col-start-2'>Buy</button>
