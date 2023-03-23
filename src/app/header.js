@@ -1,7 +1,9 @@
 "use client"
 import Link from "next/link"
 import { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch} from "react-redux";
+import { store } from "../../redux/store";
+import { changeState } from "../../redux/items";
 
 
 export default function Header(){
@@ -11,10 +13,9 @@ export default function Header(){
     const response = await fetch('/api/items')
     return response.json()
   }
-  getAllItems().then(response => {
-    console.log(response.data)
-    dispatch({type: 'items/changeSate', payload: response.data})
-  })
+ 
+  getAllItems().then(response => dispatch(changeState(response.data)));
+
   // ==================================
 
     const [open, setOpen] = useState(false);

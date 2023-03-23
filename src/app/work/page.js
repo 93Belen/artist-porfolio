@@ -1,9 +1,16 @@
 "use client"
 
 import Image from 'next/image'
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux'
+import { selectItems } from '../../../redux/selectors'
 
 
 export default function Page() {
+let items = useSelector(selectItems);
+console.log(items)
+
+
     const openModal = () => {
         document.getElementById('modal').style.display = 'block'
         document.getElementById('modal').style.animationName = 'appear-menu'
