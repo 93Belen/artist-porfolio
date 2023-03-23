@@ -3,6 +3,7 @@ import './globals.css'
 import Header from './header'
 import Modal from './modal'
 import Providers from './providers/providers'
+import CartModal from './cartModal';
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <Providers>
       <Header />
       <Cart />
+      <CartModal />
       <main className="min-h-3/5 w-screen">
           <Modal />
           {children} 
