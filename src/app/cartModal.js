@@ -20,12 +20,12 @@ export default function CartModal(){
         for(const id of cart){
             const [url, size, date, description] = items[id].description.split(" - ")
                 arr.push(
-                <div className='w-full h-[200px] flex md:flex-row flex-col justify-evenly text-black'>
+                <div className='w-full h-[100px] flex md:flex-row flex-col justify-evenly text-black'>
                     <p>{items[id].name}</p>
                     <p>{size}</p>
                     <p>price</p>
                     <Image width={50} height={70} className='rounded-md h-[70px]' src={url} />
-                    <button onClick={()=> {
+                    <button id='delete-button' type='button' className='justify-self-center self-center w-fit p-1 rounded text-red-800 hover:text-red-900' onClick={()=> {
                         removeFromCart(id)
                     }}>Delete</button>
                 </div>)
@@ -55,7 +55,7 @@ export default function CartModal(){
                     <line x1="17.4215" y1="19.3907" x2="3.28021" y2="2.5377" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
                     </svg>
                 </button>
-                <div className='w-full h-fit flex flex-col gap-2 col-span-2'>
+                <div className='w-full h-fit flex flex-col gap-6 col-span-2'>
                     {displayItems()}
                 </div>
                 <button className='text-2xl text-white p-1 bg-orange-400 h-[50px] m-2 md:m-4 w-[70px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700  md:justify-self-end col-start-2'>Buy</button>

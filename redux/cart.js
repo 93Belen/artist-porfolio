@@ -9,7 +9,13 @@ const options = createSlice({
             return state;
         },
         remove: (state, action) => {
-            const newState = state.filter(item => item !== action.payload);
+            const newState = state.filter((item, index) => {
+                if(item === action.payload && state.indexOf(item) === index){
+                }
+                else {
+                    return item;
+                }
+            });
             state = newState;
             return state;
         }
