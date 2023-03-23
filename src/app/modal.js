@@ -1,11 +1,15 @@
 "use client"
 
 import Image from "next/image"
+import { useSelector } from "react-redux"
+import { selectitemChosen } from "../../redux/selectors"
 
 
 
 
 export default function Modal(){
+const item = useSelector(selectitemChosen)
+console.log(item);
 
     const closeModal = () => {
             const hide = () => document.getElementById('modal').style.display = 'none'
