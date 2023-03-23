@@ -9,7 +9,7 @@ const options = createSlice({
             return state;
         },
         remove: (state, action) => {
-            const newState = state.filter(item !== action.payload);
+            const newState = state.filter(item => item !== action.payload);
             state = newState;
             return state;
         }
