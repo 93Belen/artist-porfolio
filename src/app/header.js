@@ -1,9 +1,22 @@
 "use client"
 import Link from "next/link"
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 
 
 export default function Header(){
+  const dispatch = useDispatch();
+// get all items from stripe =========
+  const getAllItems = async() => {
+    const response = await fetch('/api/items')
+    return response.json()
+  }
+  getAllItems().then(response => {
+    console.log(response.data)
+    dispatch({type: 'items/changeSate', payload: response.data})
+  })
+  // ==================================
+
     const [open, setOpen] = useState(false);
     const onClickMenu = () => {
         const navbar = document.getElementById('navbar');

@@ -12,11 +12,6 @@ export default function Home() {
             window.scrollTo(0, 0)
   }
 
-  const getAllItems = async() => {
-    const response = await fetch('/api/items')
-    console.log(response.json())
-  }
-  getAllItems();
 
   return (
     <div className='w-screen md:p-6 h-fit md:h-screen'>
