@@ -40,7 +40,7 @@ export default function CartModal(){
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center'>price</p>
                     <div className='flex flex-row gap-6 justify-items-center justify-around'>
                     <Image width={50} height={70} className='rounded-md h-[70px] self-center sm:m-auto mt-6 mb-6' src={url} />
-                    <button id='delete-button' type='button' className='sm:m-auto justify-self-center self-center w-fit p-1 rounded text-red-600 hover:text-red-800 text-2xl' onClick={()=> {
+                    <button id='delete-button' type='button' className='sm:m-auto justify-self-center self-center w-fit p-1 rounded hover:text-red-800 text-2xl text-slate-50' onClick={()=> {
                         removeFromCart(id)
                     }}>Delete</button>
                     </div>
