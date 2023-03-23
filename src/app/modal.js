@@ -14,9 +14,7 @@ const item = useSelector(selectitemChosen)
 const dispatch = useDispatch();
 const cart = useSelector(selectCart);
 
-const addToCard = () => {
-    dispatch(add(item))
-}
+
 useEffect(() => {
     if(cart.length> 0){
         localStorage.setItem('cart', cart);
@@ -35,6 +33,10 @@ useEffect(() => {
             document.getElementById('modal').style.transitionDuration = '1s'
 
 
+    }
+    const addToCard = () => {
+        dispatch(add(item))
+        closeModal()
     }
 
     return (
