@@ -14,7 +14,13 @@ export default function Header(){
     return response.json()
   }
  
-  getAllItems().then(response => dispatch(changeState(response.data)));
+  getAllItems().then(response => {
+    const obj = {};
+    for (const item of response.data){
+      obj[item.id] = item;
+    }
+    dispatch(changeState(obj))
+  });
 
   // ==================================
 
