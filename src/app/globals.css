@@ -54,3 +54,10 @@ html {
 #closing-modal-button:hover{
     transform: rotate(360deg);
 }
+
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}

@@ -1,3 +1,4 @@
+import Cart from './cart'
 import './globals.css'
 import Header from './header'
 import Modal from './modal'
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className='w-screen min-h-screen h-fit bg-slate-900 text-gray-100 box-border overflow-x-hidden'>
       <Providers>
       <Header />
+      <Cart />
       <main className="min-h-3/5 w-screen">
           <Modal />
           {children} 

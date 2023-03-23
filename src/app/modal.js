@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { add } from "../../redux/cart"
 import { selectitemChosen } from "../../redux/selectors"
 
 
@@ -9,7 +10,12 @@ import { selectitemChosen } from "../../redux/selectors"
 
 export default function Modal(){
 const item = useSelector(selectitemChosen)
+const dispatch = useDispatch();
 console.log(item);
+
+const addToCard = () => {
+    dispatch(add(item))
+}
 
     const closeModal = () => {
             const hide = () => document.getElementById('modal').style.display = 'none'
@@ -37,7 +43,7 @@ console.log(item);
                     <p className='text-3xl'>precio</p>
                     <p className='text-3xl'>id number</p>
                     <p className='text-3xl'>date</p>
-                    <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700'>Add to Cart</button>
+                    <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCard}>Add to Cart</button>
                 </div>
                 <div className='text-white md:col-span-2 md:p-10 md:pt-1 sm:p-4 h-fit w-auto'>
                     <p className='text-3xl'>ore veritatis et quasi architecto beatae vitae dicta sunt expli
