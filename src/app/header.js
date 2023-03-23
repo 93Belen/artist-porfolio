@@ -3,7 +3,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { useDispatch} from "react-redux";
 import { store } from "../../redux/store";
-import { changeState } from "../../redux/items";
+import { changeStateItems } from "../../redux/items";
+import { changeStateIdUrls } from "../../redux/ids-urls";
 
 
 export default function Header(){
@@ -16,10 +17,15 @@ export default function Header(){
  
   getAllItems().then(response => {
     const obj = {};
+    const idsUrls = [];
     for (const item of response.data){
       obj[item.id] = item;
+      const url = item.description.split(" - ")[0]
+      idsUrls.push({id: item.id, url: url});
     }
-    dispatch(changeState(obj))
+    dispatch(changeStateItems(obj))
+    dispatch(changeStateIdUrls(idsUrls))
+    
   });
 
   // ==================================

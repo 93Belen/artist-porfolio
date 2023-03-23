@@ -4,7 +4,7 @@ const options = {
     name: 'items',
     initialState: [],
     reducers: {
-        changeState: (state, action) => {
+        changeStateItems: (state, action) => {
             state = action.payload
             return state
         }
@@ -13,5 +13,5 @@ const options = {
 
 
 const items = createSlice(options);
-export const { changeState } = items.actions;
+export const { changeStateItems } = items.actions;
 export default items.reducer;

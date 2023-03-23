@@ -1,8 +1,10 @@
+
 import '../globals.css'
 import Link from 'next/link'
 
 
 export default function RootLayout({ children }) {
+
   return (
     <div className='items-center justify-center justify-items-center w-full'>
         <nav className='m-auto self-center justify-self-center flex'>
