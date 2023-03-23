@@ -5,8 +5,10 @@ import { selectItems } from "../../redux/selectors";
 
 
 
+
 export default function Home() {
   const items = useSelector(selectItems);
+
   console.log(items);
   const openModal = () => {
             document.getElementById('modal').style.display = 'block'
@@ -18,10 +20,10 @@ export default function Home() {
 
 
   return (
-    <div className='w-screen md:p-6 h-fit md:h-screen'>
+    <div className='w-screen md:p-6 h-fit md:h-screen' >
         <Image id='home-img' className='fixed hidden md:block left-0 md:mt-60 bottom-[-300px] md:bg-blend-screen' src={require('../../imgs/trees.png')} />
     <div className=' h-fit md:h-screen'>
-      <p className='md:w-11/12 justify-self-center p-8 text-3xl md:text-4xl m-auto md:p-12'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      <p className='md:w-11/12 justify-self-center p-8 text-3xl md:text-4xl m-auto md:p-12 font-sans'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
         ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>

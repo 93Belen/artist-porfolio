@@ -42,7 +42,7 @@ export default function About() {
 
   return (
     <div className='w-screen grid md:grid-cols-[55%_45%] md:grid-rows-[repeat(6, fit-content)] box-border gap-6 md:gap-4 justify-items-center h-fit'>
-    <p id='second-element' className='reveal text-3xl m-12 md:p-10'>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    <p id='second-element' className='reveal text-3xl m-12 md:p-10 font-sans'>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
       ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
@@ -53,7 +53,7 @@ export default function About() {
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
       sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <Image id='third-element' height={500} className=' reveal rounded-xl justify-self-center self-center m-4 md:m-5' src={require('../../../imgs/seven.jpg')} />
-      <p id='fourth-element' className='reveal md:col-span-2 text-3xl m-12 md:p-10'>ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      <p id='fourth-element' className='reveal md:col-span-2 text-3xl m-12 md:p-10 font-sans'>ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
       ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
@@ -64,7 +64,7 @@ export default function About() {
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
       sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <Image id='fith-element' width={2000} className='reveal rounded-xl self-center justify-self-center m-auto md:col-span-2' src={require('../../../imgs/mountains-2.png')} />
-      <p id='six-element' className='reveal text-3xl m-12 md:col-span-2 md:p-10'>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      <p id='six-element' className='reveal text-3xl m-12 md:col-span-2 md:p-10 font-sans'>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
       ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
@@ -75,7 +75,7 @@ export default function About() {
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
       sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <Image id='seven-element' height={500} className='reveal rounded-xl justify-self-center self-center m-4 md:m-5' src={require('../../../imgs/three.jpg')} />
-      <p id='eight-element' className='reveal text-3xl m-12 md:p-10'>ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      <p id='eight-element' className='reveal text-3xl m-12 md:p-10 font-sans'>ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
       ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
@@ -85,7 +85,7 @@ export default function About() {
       ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
       sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p id='ten-element' className='reveal text-3xl m-12 md:col-span-2 md:p-10'>ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      <p id='ten-element' className='reveal text-3xl m-12 md:col-span-2 md:p-10 font-sans'>ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
       ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 

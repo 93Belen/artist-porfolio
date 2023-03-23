@@ -49,14 +49,14 @@ useEffect(() => {
 </button>
                 <div className='p-1 h-fit justify-items-center items-center md:row-start-1 md:row-span-2'><Image className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' src={require('../../imgs/one.jpg')} /></div>
                 <div className='text-white p-4'>
-                    <p className='text-3xl'>titulo</p>
-                    <p className='text-3xl'>precio</p>
-                    <p className='text-3xl'>id number</p>
-                    <p className='text-3xl'>date</p>
+                    <p className='text-3xl font-sans'>titulo</p>
+                    <p className='text-3xl font-sans'>precio</p>
+                    <p className='text-3xl font-sans'>id number</p>
+                    <p className='text-3xl font-sans'>date</p>
                     <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCard}>Add to Cart</button>
                 </div>
                 <div className='text-white md:col-span-2 md:p-10 md:pt-1 sm:p-4 h-fit w-auto'>
-                    <p className='text-3xl'>ore veritatis et quasi architecto beatae vitae dicta sunt expli
+                    <p className='text-3xl font-sans'>ore veritatis et quasi architecto beatae vitae dicta sunt expli
                         cabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut o
                         dit aut fugit, sed quia consequuntur magni dolores eos qui ratione v
                         oluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsu
