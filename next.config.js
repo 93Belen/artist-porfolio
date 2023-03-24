@@ -4,6 +4,8 @@ const nextConfig = {
     appDir: true,
   },
   images: {
+    loader: 'custom',
+    loaderFile: './src/app/loader.js',
     domains: ['drive.google.com'],
     remotePatterns: [
       {
