@@ -38,7 +38,11 @@ export default function About() {
     reveal();
   }, []);
 
-  window.addEventListener('scroll', reveal);
+  useEffect(() => {
+    window.addEventListener('scroll', reveal);
+  })
+
+ 
 
   return (
     <div className='w-screen grid md:grid-cols-[55%_45%] md:grid-rows-[repeat(6, fit-content)] box-border gap-6 md:gap-4 justify-items-center h-fit'>
