@@ -50,12 +50,12 @@ useEffect(() => {
                 </svg>
 </button>
                 <div className='p-1 h-fit justify-items-center items-center md:row-start-1 md:row-span-2'><Image className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' src={require('../../imgs/one.jpg')} /></div>
-                <div className='text-white p-4'>
+                <div className='p-4 text-black'>
                     <p className='text-3xl font-sans'>titulo</p>
                     <p className='text-3xl font-sans'>precio</p>
                     <p className='text-3xl font-sans'>id number</p>
                     <p className='text-3xl font-sans'>date</p>
-                    <input id='quantity-input' type='number' />
+                    <input min='1' max='30' placeholder='1' className='text-3xl font-sans text-black w-[50px] md:text-black' id='quantity-input' type='number' />
                     <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCard}>Add to Cart</button>
                 </div>
                 <div className='text-white md:col-span-2 md:p-10 md:pt-1 sm:p-4 h-fit w-auto'>
