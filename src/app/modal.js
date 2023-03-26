@@ -2,9 +2,9 @@
 
 import Image from "next/image"
 import { useDispatch, useSelector } from "react-redux"
-import { add } from "../../redux/cart"
+import { add, addQuantity } from "../../redux/cart"
 import { changeStatePrice } from "../../redux/price"
-import { selectitemChosen, selectItems, selectPrice } from "../../redux/selectors"
+import { selectCart, selectitemChosen, selectItems, selectPrice } from "../../redux/selectors"
 import myImageLoader from "./loader";
 
 
@@ -18,6 +18,7 @@ const item = useSelector(selectitemChosen)
 const dispatch = useDispatch();
 const items = useSelector(selectItems);
 let price = useSelector(selectPrice)
+const cart = useSelector(selectCart);
 const getPrice = async(id) => {
     const response = await fetch(`/api/prices/${id}`)
     return response.json()
@@ -41,7 +42,7 @@ const populatemodal = () => {
             <p id='price' className='text-3xl font-sans text-white'>id number</p>
             <p className='text-3xl font-sans text-white'>date</p>
             <input min='1' max='30' placeholder='1' className='text-3xl font-sans text-black w-[60px] md:text-black rounded-sm' id='quantity-input' type='number' />
-            <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCard}>Add to Cart</button>
+            <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCart}>Add to Cart</button>
         </div>
         <div className='text-white md:col-span-2 md:p-10 md:pt-1 sm:p-4 h-fit w-auto'>
             <p className='text-3xl font-sans'>ore veritatis et quasi architecto beatae vitae dicta sunt expli
@@ -75,12 +76,22 @@ const populatemodal = () => {
 
 
     }
-    const addToCard = () => {
+    const addToCart = () => {
+        console.log(cart.some((cartItem) => cartItem = item[0]))
         let quantity = document.getElementById('quantity-input').value;
         if(!quantity) {
             quantity = 1
         }
-        dispatch(add([item[0], quantity]))
+        if(cart.some((cartItem) => cartItem.includes(item[0]))){
+            dispatch(addQuantity([item[0], quantity]))
+        }
+        else {
+            console.log('adding!')
+            dispatch(add([item[0], quantity]))
+        }
+        
+       
+        
         closeModal()
 
     }

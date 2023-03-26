@@ -12,10 +12,23 @@ const options = createSlice({
             const newState = state.filter(item => action.payload !== item[0]);
             state = newState;
             return state;
+        },
+        addQuantity: (state, action) => {
+            const newState = state.map(item => {
+                if(item[0] === action.payload[0]){
+                    item = [item[0], item[1] + action.payload[1]]
+                    return item;
+                }
+                else {
+                    return item;
+                }
+            })
+            state = newState;
+            return state;
         }
     }
 });
 
 
-export const { add, remove } = options.actions;
+export const { add, remove, addQuantity } = options.actions;
 export default options.reducer;
