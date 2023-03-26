@@ -15,6 +15,7 @@ export async function checkOut({lineItems}){
 
 
     await stripe.redirectToCheckout({
+        shippingAddressCollection: {allowedCountries: ['US', 'CA']},
         mode: 'payment',
         lineItems,
         successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,
