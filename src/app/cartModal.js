@@ -39,7 +39,7 @@ export default function CartModal(){
                 <div key={randomKey} className='box-border w-full md:h-[100px] sm:h-fit sm:text-center sm:justify-items-center md:flex sm:grid sm:grid-rows-5 md:flex-row flex-col gap-6 justify-evenly rounded-xl text-white font-sans'>
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{items[id[0]].name}</p>
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{size}</p>
-                    <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{items[id[1]]}</p>
+                    <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{id[1]}</p>
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>price</p>
                     <div className='flex flex-row gap-6 justify-items-center justify-around'>
                     <Image loader={myloader} width={50} height={70} className='rounded-md h-[70px] self-center sm:m-auto mt-6 mb-6' src='1TmJDqWgPIqn7tWTDZzYWg7Q25se90nMK ' />
