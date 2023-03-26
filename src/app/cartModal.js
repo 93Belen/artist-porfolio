@@ -7,6 +7,7 @@ import { remove } from "../../redux/cart";
 import { useState, useRef, useEffect } from 'react'
 import autoAnimate from '@formkit/auto-animate'
 import myloader from './loader';
+import { checkOut } from "../../checkOut";
 
 
 
@@ -15,7 +16,7 @@ export default function CartModal(){
     const cart = useSelector(selectCart);
     const items = useSelector(selectItems);
     const dispatch = useDispatch();
-
+    console.log(items);
     const [show, setShow] = useState(false)
     const parent = useRef(null)
 
@@ -76,7 +77,14 @@ export default function CartModal(){
                 <div ref={parent} className='w-full h-fit flex flex-col gap-6 col-span-2'>
                     {displayItems()}
                 </div>
-                <button className='text-2xl text-white p-1 bg-orange-400 h-[50px] m-2 md:m-4 w-[70px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700  md:justify-self-end col-start-2'>Buy</button>
+                <button className='text-2xl text-white p-1 bg-orange-400 h-[50px] m-2 md:m-4 w-[70px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700  md:justify-self-end col-start-2' onClick={()=> {
+                    checkOut({
+                        lineItems: [{
+                            price: `${items[cart[0]].default_price}`,
+                            quantity: 1
+                        }]
+                    })
+                }}>Buy</button>
             </div>
         </div>
     )
