@@ -35,7 +35,10 @@ useEffect(() => {
 
     }
     const addToCard = () => {
-        const quantity = document.getElementById('quantity-input').value;
+        let quantity = document.getElementById('quantity-input').value;
+        if(!quantity) {
+            quantity = 1
+        }
         dispatch(add([item, quantity]))
         closeModal()
 
