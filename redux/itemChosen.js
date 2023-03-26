@@ -5,7 +5,7 @@ const options = {
     initialState: [],
     reducers: {
         changeStateitemChosen: (state, action) => {
-            state = action.payload
+            state = [action.payload]
             return state
         }
     }
