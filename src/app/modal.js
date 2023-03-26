@@ -37,7 +37,7 @@ const populatemodal = () => {
         <div className='p-1 h-fit justify-items-center items-center md:row-start-1 md:row-span-2'><Image width={200} height={100} className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' loader={myImageLoader} src={items[item].description.split(' - ')[0]} /></div>
         <div className='p-4 text-black'>
             <p className='text-3xl font-sans text-white'>{items[item].name}</p>
-            <p className='text-3xl font-sans text-white'>${price}</p>
+            <p className='text-3xl font-sans text-white'>$ {price / 100}</p>
             <p id='price' className='text-3xl font-sans text-white'>id number</p>
             <p className='text-3xl font-sans text-white'>date</p>
             <input min='1' max='30' placeholder='1' className='text-3xl font-sans text-black w-[60px] md:text-black rounded-sm' id='quantity-input' type='number' />
