@@ -33,11 +33,11 @@ export default function CartModal(){
     const displayItems = () => {
         const arr = [];
         for(const id of cart){
-            const [url, size, date, description] = items[id].description.split(" - ")
+            const [url, size, date, description] = items[id[0]].description.split(" - ")
             const randomKey = Math.random() * 12 + Math.random() * 24;
                 arr.push(
                 <div key={randomKey} className='box-border w-full md:h-[100px] sm:h-fit sm:text-center sm:justify-items-center md:flex sm:grid sm:grid-rows-5 md:flex-row flex-col gap-6 justify-evenly rounded-xl text-white font-sans'>
-                    <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{items[id].name}</p>
+                    <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{items[id[0]].name}</p>
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{size}</p>
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>price</p>
                     <div className='flex flex-row gap-6 justify-items-center justify-around'>
@@ -65,6 +65,16 @@ export default function CartModal(){
 
 
     }
+    const addItems = (ids) => {
+        let lineItems = [];
+        ids.forEach(item => {
+            lineItems.push({
+                price: items[item[0]].default_price,
+                quantity: Number(item[1])
+            })
+        })
+        return lineItems;
+    }
 
     return (
         <div id='cart-modal' className='h-[100vh] w-screen absolute z-10  md:rounded-xl hidden box-border'>
@@ -78,11 +88,9 @@ export default function CartModal(){
                     {displayItems()}
                 </div>
                 <button className='text-2xl text-white p-1 bg-orange-400 h-[50px] m-2 md:m-4 w-[70px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700  md:justify-self-end col-start-2' onClick={()=> {
+                    const lineItems = addItems(cart);
                     checkOut({
-                        lineItems: [{
-                            price: `${items[cart[0]].default_price}`,
-                            quantity: 1
-                        }]
+                        lineItems: lineItems
                     })
                 }}>Buy</button>
             </div>

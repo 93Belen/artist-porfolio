@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { add } from "../../redux/cart"
-import { selectCart, selectitemChosen } from "../../redux/selectors"
+import { selectCart, selectitemChosen, selectItems } from "../../redux/selectors"
 
 
 
@@ -35,8 +35,10 @@ useEffect(() => {
 
     }
     const addToCard = () => {
-        dispatch(add(item))
+        const quantity = document.getElementById('quantity-input').value;
+        dispatch(add([item, quantity]))
         closeModal()
+
     }
 
     return (
@@ -53,6 +55,7 @@ useEffect(() => {
                     <p className='text-3xl font-sans'>precio</p>
                     <p className='text-3xl font-sans'>id number</p>
                     <p className='text-3xl font-sans'>date</p>
+                    <input id='quantity-input' type='number' />
                     <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCard}>Add to Cart</button>
                 </div>
                 <div className='text-white md:col-span-2 md:p-10 md:pt-1 sm:p-4 h-fit w-auto'>
