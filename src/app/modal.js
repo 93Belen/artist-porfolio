@@ -55,7 +55,7 @@ useEffect(() => {
                     <p className='text-3xl font-sans'>precio</p>
                     <p className='text-3xl font-sans'>id number</p>
                     <p className='text-3xl font-sans'>date</p>
-                    <input min='1' max='30' placeholder='1' className='text-3xl font-sans text-black w-[50px] md:text-black' id='quantity-input' type='number' />
+                    <input min='1' max='30' placeholder='1' className='text-3xl font-sans text-black w-[60px] md:text-black rounded-sm' id='quantity-input' type='number' />
                     <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCard}>Add to Cart</button>
                 </div>
                 <div className='text-white md:col-span-2 md:p-10 md:pt-1 sm:p-4 h-fit w-auto'>
