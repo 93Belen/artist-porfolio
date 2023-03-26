@@ -1,11 +1,14 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { add } from "../../redux/cart"
-import { selectCart, selectitemChosen, selectItems } from "../../redux/selectors"
-import myImageLoader from "./loader"
+import { changeStatePrice } from "../../redux/price"
+import { selectitemChosen, selectItems, selectPrice } from "../../redux/selectors"
+import myImageLoader from "./loader";
+
+
+
 
 
 
@@ -14,12 +17,17 @@ export default function Modal(){
 const item = useSelector(selectitemChosen)
 const dispatch = useDispatch();
 const items = useSelector(selectItems);
-console.log(item)
+let price = useSelector(selectPrice)
+const getPrice = async(id) => {
+    const response = await fetch(`/api/prices/${id}`)
+    return response.json()
+  }
 
 
 const populatemodal = () => {
     let result =[];
     item.forEach(item => {
+        getPrice(items[item].default_price).then(response => dispatch(changeStatePrice(response.unit_amount)))
         result.push(<div className='grid p-8 pb-10 h-fit sm:w-full grid-cols-1 md:grid-cols-2 md:grid-rows-[5%_40%_55%] gap-4 md:w-4/5 m-auto md:rounded-xl backdrop-blur-2xl'>
         <button id='closing-modal-button' onClick={closeModal} className='text-white md:col-start-2 md:self-start md:justify-self-end row-start-1 md:hover:rotate-[360deg] md:active:rotate-[360deg] duration-700'><svg id='close-modal-svg' width="25" height="100%" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="1.5" y1="-1.5" x2="23.5" y2="-1.5" transform="matrix(-0.642788 0.766044 0.766044 0.642788 18.5348 2.42444)" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
@@ -29,8 +37,8 @@ const populatemodal = () => {
         <div className='p-1 h-fit justify-items-center items-center md:row-start-1 md:row-span-2'><Image width={200} height={100} className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' loader={myImageLoader} src={items[item].description.split(' - ')[0]} /></div>
         <div className='p-4 text-black'>
             <p className='text-3xl font-sans text-white'>{items[item].name}</p>
-            <p className='text-3xl font-sans text-white'>precio</p>
-            <p className='text-3xl font-sans text-white'>id number</p>
+            <p className='text-3xl font-sans text-white'>${price}</p>
+            <p id='price' className='text-3xl font-sans text-white'>id number</p>
             <p className='text-3xl font-sans text-white'>date</p>
             <input min='1' max='30' placeholder='1' className='text-3xl font-sans text-black w-[60px] md:text-black rounded-sm' id='quantity-input' type='number' />
             <button className='text-2xl text-white p-1 bg-orange-400 h-[60px] m-2 md:m-4 w-[140px] md:bg-orange-400 rounded-xl hover:bg-orange-300 md:hover:text-black duration-700' onClick={addToCard}>Add to Cart</button>

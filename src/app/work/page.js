@@ -6,6 +6,7 @@ import { changeStateitemChosen } from '../../../redux/itemChosen';
 import { selectIdsUrls } from '../../../redux/selectors'
 import Loading from './loading';
 import myloader from '../loader';
+import { changeStatePrice } from '../../../redux/price';
 
 
 export default function Page() {
@@ -23,7 +24,6 @@ if(idsUrls.length === 0){
         document.getElementById('modal').style.animationDuration = '1s'
         document.getElementById('modal').style.transform = 'scale(1)';
         dispatch(changeStateitemChosen(id));
-
         window.scrollTo(0, 0)
 }
     return (
