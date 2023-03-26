@@ -18,7 +18,7 @@ export async function checkOut({lineItems}){
         shippingAddressCollection: {allowedCountries: ['US', 'CA']},
         mode: 'payment',
         lineItems,
-        successUrl: `${window.location.origin}?session_id={CHECKOUT_SESSION_ID}`,
+        successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}`
     })
 }
