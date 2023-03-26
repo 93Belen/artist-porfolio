@@ -83,11 +83,10 @@ const populatemodal = () => {
             quantity = 1
         }
         if(cart.some((cartItem) => cartItem.includes(item[0]))){
-            dispatch(addQuantity([item[0], quantity]))
+            dispatch(addQuantity([item[0], Number(quantity)]))
         }
         else {
-            console.log('adding!')
-            dispatch(add([item[0], quantity]))
+            dispatch(add([item[0], Number(quantity)]))
         }
         
        
