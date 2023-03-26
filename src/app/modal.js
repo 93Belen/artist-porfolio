@@ -5,6 +5,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { add } from "../../redux/cart"
 import { selectCart, selectitemChosen, selectItems } from "../../redux/selectors"
+import myImageLoader from "./loader"
 
 
 
@@ -13,6 +14,8 @@ export default function Modal(){
 const item = useSelector(selectitemChosen)
 const dispatch = useDispatch();
 const cart = useSelector(selectCart);
+const items = useSelector(selectItems);
+
 
 
 useEffect(() => {
@@ -52,9 +55,9 @@ useEffect(() => {
                     <line x1="17.4215" y1="19.3907" x2="3.28021" y2="2.5377" stroke="#FB923C" stroke-width="3" stroke-linecap="round"/>
                 </svg>
 </button>
-                <div className='p-1 h-fit justify-items-center items-center md:row-start-1 md:row-span-2'><Image className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' src={require('../../imgs/one.jpg')} /></div>
+                <div className='p-1 h-fit justify-items-center items-center md:row-start-1 md:row-span-2'><Image width={200} height={100} className='h-auto w-full md:w-auto md:h-64 m-auto rounded-md md:rotate-[-10deg]' loader={myImageLoader} src={'1TmJDqWgPIqn7tWTDZzYWg7Q25se90nMK'} /></div>
                 <div className='p-4 text-black'>
-                    <p className='text-3xl font-sans text-white'>titulo</p>
+                    <p className='text-3xl font-sans text-white'>{}</p>
                     <p className='text-3xl font-sans text-white'>precio</p>
                     <p className='text-3xl font-sans text-white'>id number</p>
                     <p className='text-3xl font-sans text-white'>date</p>
