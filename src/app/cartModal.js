@@ -1,7 +1,7 @@
 "use client"
 
 import { useDispatch, useSelector } from "react-redux"
-import { selectCart, selectItems } from "../../redux/selectors"
+import { selectCart, selectItems, selectPrice } from "../../redux/selectors"
 import Image from "next/image";
 import { remove } from "../../redux/cart";
 import { useState, useRef, useEffect } from 'react'
@@ -16,6 +16,7 @@ export default function CartModal(){
     const cart = useSelector(selectCart);
     const items = useSelector(selectItems);
     const dispatch = useDispatch();
+    const price = useSelector(selectPrice);
     console.log(items);
     const [show, setShow] = useState(false)
     const parent = useRef(null)
@@ -40,7 +41,7 @@ export default function CartModal(){
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{items[id[0]].name}</p>
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{size}</p>
                     <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>{id[1]}</p>
-                    <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>price</p>
+                    <p className='self-center text-3xl p-2 sm:m-auto md:m-0 text-center font-sans'>$ {(price / 100 * id[1])}</p>
                     <div className='flex flex-row gap-6 justify-items-center justify-around'>
                     <Image loader={myloader} width={50} height={70} className='rounded-md h-[70px] self-center sm:m-auto mt-6 mb-6' src={items[id[0]].description.split(' - ')[0]} />
                     <button id='delete-button' type='button' className='sm:m-auto justify-self-center self-center w-fit p-1 rounded hover:text-red-800 text-2xl text-slate-50' onClick={()=> {
