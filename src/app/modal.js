@@ -72,7 +72,7 @@ const populatemodal = () => {
         if(!quantity) {
             quantity = 1
         }
-        dispatch(add([item, quantity]))
+        dispatch(add([item[0], quantity]))
         closeModal()
 
     }
