@@ -73,7 +73,7 @@ export default function Header(){
           </label>
           {/* Desktop menu */}
           <nav className='hidden md:flex'>
-            <p className='text-orange-400 text-2xl text-center font-sans'><Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>Home</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/work'>Work</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/about'>About</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>Contact</Link></p>
+            <p className='text-orange-400 text-2xl text-center font-sans'><Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/'>Home</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/work'>Work</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/about'>About</Link> | <Link className='text-amber-50 active:text-teal-800 hover:text-teal-800 duration-500' href='/contact'>Contact</Link></p>
           </nav>
           {/* Mobile menu */}
           <nav className='md:hidden'>
@@ -88,7 +88,7 @@ export default function Header(){
               <Link onClick={onClickMenu} href="/">Home</Link>
               <Link onClick={onClickMenu} href="/work">Work</Link>
               <Link onClick={onClickMenu} href="/about">About</Link>
-              <Link onClick={onClickMenu} href="/">Contact</Link>
+              <Link onClick={onClickMenu} href="/contact">Contact</Link>
             </div>
           </nav>
           {/* Logo */}
