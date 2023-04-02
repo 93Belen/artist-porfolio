@@ -13,9 +13,9 @@ export default function Home() {
 
   return (
     <div className='w-screen md:p-6 h-fit md:h-screen' >
-        <form onSubmit={handleSubmit} method='POST' action='https://formspree.io/f/myyadqdy' className='flex flex-col gap-10 w-3/6 p-10'>
-            <input name='name' placeholder='name' className='rounded-md w-4/5 h-fit p-2 text-black' type='text' required />
-            <input placeholder='email' className='rounded-md w-4/5 h-fit p-2 text-black' type='email' required />
+        <form onSubmit={handleSubmit} method='POST' action='https://formspree.io/f/myyadqdy' className='flex flex-col gap-10 md:w-3/6 w-full p-10'>
+            <input name='name' placeholder='name' className='rounded-md md:w-4/5 w-full h-fit p-2 text-black' type='text' required />
+            <input placeholder='email' className='rounded-md md:w-4/5 w-full h-fit p-2 text-black' type='email' required />
             <ValidationError 
                 prefix="Email" 
                 field="email"
