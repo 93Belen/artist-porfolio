@@ -6,7 +6,6 @@ import { changeStateitemChosen } from '../../../redux/itemChosen';
 import { selectIdsUrls } from '../../../redux/selectors'
 import Loading from './loading';
 import myloader from '../loader';
-import { changeStatePrice } from '../../../redux/price';
 
 
 export default function Page() {

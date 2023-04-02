@@ -10,7 +10,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'drive.google.com',
+        hostname: 'flic.kr',
         port: '',
         pathname: '/**',
       },

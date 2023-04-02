@@ -20,7 +20,7 @@ export default function Header(){
     const idsUrls = [];
     for (const item of response.data){
       obj[item.id] = item;
-      const url = item.description.split(" - ")[0]
+      const url = item.metadata.img;
       idsUrls.push({id: item.id, url: url});
     }
     dispatch(changeStateItems(obj))
